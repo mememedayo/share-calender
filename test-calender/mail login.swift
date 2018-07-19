@@ -1,121 +1,82 @@
-//
-//  login.swift
-//  ycalendar
-//
-//  Created by 葛上海翔 on 2018/07/06.
-//  Copyright © 2018年 kaito kuzukami. All rights reserved.
-//
+import Firebase
 
-import UIKit
-import  Firebase
-
-class loginview : UIViewController,UITextFieldDelegate {
+@objc(PasswordlessViewController)
+class PasswordlessViewController: UIViewController {
     
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    var link: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //textfieldを出す
-        mailtext.becomeFirstResponder()
-        passtext.becomeFirstResponder()
-        //firebaseとの連携
-        
-        
-        
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        mailtext.resignFirstResponder()
-        passtext.resignFirstResponder()
-        
-        return true
-    }
-    //login テキスト（mail,）
-    let mailtext : UITextField = {
-        
-        let mtt =  UITextField()
-        mtt.backgroundColor = UIColor.white
-        mtt.translatesAutoresizingMaskIntoConstraints = false
-        mtt.textAlignment = .center
-        mtt.textColor = UIColor.black
-        //fontは後でええや
-        //入力されたテキストの保存
-        return mtt
-    }()
-    
-    let passtext : UITextField = {
-        let ptt = UITextField()
-        ptt.backgroundColor = UIColor.white
-        ptt.translatesAutoresizingMaskIntoConstraints = false
-        ptt.textColor = UIColor.black
-        ptt.textAlignment = .center
-        
-        //fontは後でええか
-        //保存
-        return ptt
-    }()
-    //画面遷移のためのボタン
-    
-    //key値の設定
-    
-    //clearbuttonの処理
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        print("clear")
-        return true
-    }
-    
-    //signinbutton
-    let signinbutton : UIButton = {
-        let sbtn = UIButton()
-        
-        sbtn.setTitle("サインイン", for: .normal)
-        sbtn.setTitleColor(UIColor.blue, for: .normal)
-        sbtn.translatesAutoresizingMaskIntoConstraints = false
-        
-        return sbtn
-    }()
-    let newAccountButton:UIButton = {
-        let NABtn = UIButton()
-        NABtn.setTitle("新規登録", for: .normal)
-        NABtn.setTitleColor(UIColor.blue, for:.normal)
-        NABtn.translatesAutoresizingMaskIntoConstraints = false
-        
-        return NABtn
-    }()
-    //buttonをおした時の処理(ユーザー登録や新規アカウント作成)
-    @objc func btnAcountAction(sender:UIButton){
-        if sender == newAccountButton{
-            
-            
+        emailField.text = UserDefaults.standard.value(forKey: "Email") as? String
+        if let link = UserDefaults.standard.value(forKey: "Link") as? String {
+            self.link = link
+            signInButton.isEnabled = true
         }
-        if sender == signinbutton {
-            
-            
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func didTapSignInWithEmailLink(_ sender: AnyObject) {
+        if let email = self.emailField.text {
+            showSpinner {
+                // [START signin_emaillink]
+                Auth.auth().signIn(withEmail: email, link: self.link) { (user, error) in
+                    // [START_EXCLUDE]
+                    self.hideSpinner {
+                        if let error = error {
+                            self.showMessagePrompt(error.localizedDescription)
+                            return
+                        }
+                        self.navigationController!.popViewController(animated: true)
+                    }
+                    // [END_EXCLUDE]
+                }
+                // [END signin_emaillink]
+            }
+        } else {
+            self.showMessagePrompt("Email can't be empty")
         }
-        
     }
     
-    //textfieldとbuttonの設定
-    func setupview(){
-        view.addSubview(passtext)
-        passtext.frame.size.width = self.view.frame.width*2/3
-        passtext.frame.size.height = 45
-        //setting potion
-        passtext.center.x = self.view.center.x
-        passtext.center.y = 240
-        passtext.placeholder = "password"
-        passtext.returnKeyType = .done
-        passtext.clearButtonMode = .always
-        //余白いる？
-        view.addSubview(mailtext)
-        mailtext.frame.size.width = self.view.frame.width * 2/3
-        mailtext.frame.size.height = 45
-        mailtext.center.x = self.view.center.x
-        mailtext.center.y = passtext.center.y + 25
-        mailtext.placeholder = "mail"
-        mailtext.returnKeyType = .done
-        //setting buttons
-        
-    }
-    
+    @IBAction func didTapSendSignInLink(_ sender: AnyObject) {
+        if let email = self.emailField.text {
+            showSpinner {
+                // [START action_code_settings]
+                let actionCodeSettings = ActionCodeSettings()
+                actionCodeSettings.url = URL(string: "https://www.example.com")
+                // The sign-in operation has to always be completed in the app.
+                actionCodeSettings.handleCodeInApp = true
+                actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+                actionCodeSettings.setAndroidPackageName("com.example.android",
+                                                         installIfNotAvailable: false, minimumVersion: "12")
+                // [END action_code_settings]
+                // [START send_signin_link]
+                Auth.auth().sendSignInLink(toEmail:email,
+                                           actionCodeSettings: actionCodeSettings) { error in
+                                            // [START_EXCLUDE]
+                                            self.hideSpinner {
+                                                // [END_EXCLUDE]
+                                                if let error = error {
+                                                    self.showMessagePrompt(error.localizedDescription)
+                                                    return
+                                                }
+                                                // The link was successfully sent. Inform the user.
+                                                // Save the email locally so you don't need to ask the user for it again
+                                                // if they open the link on the same device.
+                                                UserDefaults.standard.set(email, forKey: "Email")
+                                                self.showMessagePrompt("Check your email for link")
+                                                // [START_EXCLUDE]
+                                            }
+                                            // [END_EXCLUDE]
+                }
+                // [END send_signin_link]
+            }
+        } else {
+            self.showMessagePrompt("Email can't be empty")
+        }
 }
-
+}
