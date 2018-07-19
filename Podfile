@@ -11,7 +11,8 @@ target 'test-calender' do
   pod 'Firebase/Core'
 
    pod 'FirebaseUI'
-
+  
+pod 'Firebase/Auth'
 
 
 end
