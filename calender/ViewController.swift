@@ -37,6 +37,15 @@ class ViewController: UIViewController {
     // MARK: Life cycle
     
     override func viewDidLoad() {
+        //kakakakakakakakakakaka
+        if UserDefaults.standard.object(forKey: "check") != nil {
+            
+        }else{
+            
+            let login = self.storyboard?.instantiateViewController(withIdentifier: "login")
+            self.present(login!, animated: true , completion: nil)
+            
+        }
         super.viewDidLoad()
         calendar.scrollDirection = .horizontal
         calendar.appearance.caseOptions = [.headerUsesUpperCase,.weekdayUsesUpperCase]

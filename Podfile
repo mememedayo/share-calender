@@ -16,5 +16,9 @@ pod 'FSCalendar'
     inherit! :search_paths
     # Pods for testing
   end
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod ‘Firebase’
+  pod ‘Firebase/Database’
 
 end

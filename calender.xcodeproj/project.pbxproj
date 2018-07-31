@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2A9568A3B757B47FDFB7CC7F /* Pods_calenderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127387C7514F1ACEB8FC52F8 /* Pods_calenderUITests.framework */; };
+		432CECF4210FF8FF004C17D7 /* GoogleService-Info-6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432CECF3210FF8FF004C17D7 /* GoogleService-Info-6.plist */; };
+		432CECFC2110090D004C17D7 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CECFB2110090D004C17D7 /* login.swift */; };
+		432CED6A2110A8CD004C17D7 /* Pods_calenderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED692110A8CD004C17D7 /* Pods_calenderUITests.framework */; };
+		432CED6C2110A8D5004C17D7 /* Pods_calenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */; };
+		432CED6E2110A8E7004C17D7 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6D2110A8E7004C17D7 /* FirebaseAuth.framework */; };
 		9008A6091FFCEA4700B135BE /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */; };
 		9008A60B1FFCEECB00B135BE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008A60A1FFCEECB00B135BE /* EventModel.swift */; };
 		901CDAF81FFBA10A001E5777 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901CDAF71FFBA10A001E5777 /* CalendarTableViewCell.swift */; };
@@ -44,6 +49,11 @@
 		127387C7514F1ACEB8FC52F8 /* Pods_calenderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calenderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3593C1B2AE1F1532B5CF89 /* Pods_calender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA26D2A961ECBBB4A79E7BD /* Pods-calenderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calenderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-calenderTests/Pods-calenderTests.release.xcconfig"; sourceTree = "<group>"; };
+		432CECF3210FF8FF004C17D7 /* GoogleService-Info-6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-6.plist"; sourceTree = "<group>"; };
+		432CECFB2110090D004C17D7 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		432CED692110A8CD004C17D7 /* Pods_calenderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_calenderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_calenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		432CED6D2110A8E7004C17D7 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC9A05D12F73599D8B6DF31 /* Pods-calenderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calenderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calenderTests/Pods-calenderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86EC96A16D5D201CFC7BF55B /* Pods_calenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432CED6E2110A8E7004C17D7 /* FirebaseAuth.framework in Frameworks */,
+				432CED6C2110A8D5004C17D7 /* Pods_calenderTests.framework in Frameworks */,
+				432CED6A2110A8CD004C17D7 /* Pods_calenderUITests.framework in Frameworks */,
 				FDD2B1A35664EE7A1D8D7704 /* Pods_calender.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +153,10 @@
 				907678081FFB383600DA911F /* ViewController.swift */,
 				9076780A1FFB383600DA911F /* Main.storyboard */,
 				9076780D1FFB383600DA911F /* Assets.xcassets */,
+				432CECFB2110090D004C17D7 /* login.swift */,
 				9076780F1FFB383600DA911F /* LaunchScreen.storyboard */,
 				907678121FFB383600DA911F /* Info.plist */,
+				432CECF3210FF8FF004C17D7 /* GoogleService-Info-6.plist */,
 				901CDAF41FFB3BA2001E5777 /* calender-Bridging-Header.h */,
 				901CDAF71FFBA10A001E5777 /* CalendarTableViewCell.swift */,
 				901CDAF91FFBA34D001E5777 /* DateFormatterExtension.swift */,
@@ -172,6 +187,9 @@
 		DA39BFAE68FF7D351CF972DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				432CED6D2110A8E7004C17D7 /* FirebaseAuth.framework */,
+				432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */,
+				432CED692110A8CD004C17D7 /* Pods_calenderUITests.framework */,
 				1D3593C1B2AE1F1532B5CF89 /* Pods_calender.framework */,
 				86EC96A16D5D201CFC7BF55B /* Pods_calenderTests.framework */,
 				127387C7514F1ACEB8FC52F8 /* Pods_calenderUITests.framework */,
@@ -293,6 +311,7 @@
 			files = (
 				907678111FFB383600DA911F /* LaunchScreen.storyboard in Resources */,
 				9076780E1FFB383600DA911F /* Assets.xcassets in Resources */,
+				432CECF4210FF8FF004C17D7 /* GoogleService-Info-6.plist in Resources */,
 				9076780C1FFB383600DA911F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,10 +359,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-calender/Pods-calender-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -398,6 +425,7 @@
 				907678091FFB383600DA911F /* ViewController.swift in Sources */,
 				901CDAFA1FFBA34D001E5777 /* DateFormatterExtension.swift in Sources */,
 				9008A60B1FFCEECB00B135BE /* EventModel.swift in Sources */,
+				432CECFC2110090D004C17D7 /* login.swift in Sources */,
 				907678071FFB383600DA911F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
