@@ -26,7 +26,7 @@ class login:UIViewController,UITextFieldDelegate{
 
     }
     
-/*    @IBAction func loginbutton(_ sender: Any) {
+    @IBAction func loginbutton(_ sender: Any) {
       
         let alertviewcontroller = UIAlertController(title: "error", message: "間違っています！", preferredStyle: .alert)
         let okaction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -42,9 +42,9 @@ class login:UIViewController,UITextFieldDelegate{
             return
             }
             } )
-    }*/
+    }
     
-    /*@IBAction func createbutton(_ sender: Any) {
+    @IBAction func createbutton(_ sender: Any) {
         
         if mailtext.text == nil || passwordtext.text == nil{
             let alertviewcontroller = UIAlertController(title: "error", message: "入力欄が空です！", preferredStyle: .alert)
@@ -73,7 +73,7 @@ class login:UIViewController,UITextFieldDelegate{
                 self.present(alertviewcontroller,animated: true,completion: nil)
                 }
                 
-        }) }}*/
+        }) }}
     
     
     
