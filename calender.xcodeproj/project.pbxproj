@@ -13,6 +13,7 @@
 		432CED6A2110A8CD004C17D7 /* Pods_calenderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED692110A8CD004C17D7 /* Pods_calenderUITests.framework */; };
 		432CED6C2110A8D5004C17D7 /* Pods_calenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */; };
 		432CED6E2110A8E7004C17D7 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6D2110A8E7004C17D7 /* FirebaseAuth.framework */; };
+		432CED9A21115924004C17D7 /* new file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CED9921115924004C17D7 /* new file.swift */; };
 		9008A6091FFCEA4700B135BE /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */; };
 		9008A60B1FFCEECB00B135BE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008A60A1FFCEECB00B135BE /* EventModel.swift */; };
 		901CDAF81FFBA10A001E5777 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901CDAF71FFBA10A001E5777 /* CalendarTableViewCell.swift */; };
@@ -54,6 +55,7 @@
 		432CED692110A8CD004C17D7 /* Pods_calenderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_calenderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_calenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		432CED6D2110A8E7004C17D7 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		432CED9921115924004C17D7 /* new file.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "new file.swift"; sourceTree = "<group>"; };
 		6DC9A05D12F73599D8B6DF31 /* Pods-calenderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calenderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calenderTests/Pods-calenderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86EC96A16D5D201CFC7BF55B /* Pods_calenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,17 +153,18 @@
 			children = (
 				907678061FFB383600DA911F /* AppDelegate.swift */,
 				907678081FFB383600DA911F /* ViewController.swift */,
-				9076780A1FFB383600DA911F /* Main.storyboard */,
-				9076780D1FFB383600DA911F /* Assets.xcassets */,
-				432CECFB2110090D004C17D7 /* login.swift */,
-				9076780F1FFB383600DA911F /* LaunchScreen.storyboard */,
-				907678121FFB383600DA911F /* Info.plist */,
-				432CECF3210FF8FF004C17D7 /* GoogleService-Info-6.plist */,
-				901CDAF41FFB3BA2001E5777 /* calender-Bridging-Header.h */,
+				432CED9921115924004C17D7 /* new file.swift */,
 				901CDAF71FFBA10A001E5777 /* CalendarTableViewCell.swift */,
 				901CDAF91FFBA34D001E5777 /* DateFormatterExtension.swift */,
 				9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */,
 				9008A60A1FFCEECB00B135BE /* EventModel.swift */,
+				432CECFB2110090D004C17D7 /* login.swift */,
+				9076780A1FFB383600DA911F /* Main.storyboard */,
+				9076780D1FFB383600DA911F /* Assets.xcassets */,
+				9076780F1FFB383600DA911F /* LaunchScreen.storyboard */,
+				907678121FFB383600DA911F /* Info.plist */,
+				432CECF3210FF8FF004C17D7 /* GoogleService-Info-6.plist */,
+				901CDAF41FFB3BA2001E5777 /* calender-Bridging-Header.h */,
 			);
 			path = calender;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				901CDAF81FFBA10A001E5777 /* CalendarTableViewCell.swift in Sources */,
 				9008A6091FFCEA4700B135BE /* HeaderTableViewCell.swift in Sources */,
 				907678091FFB383600DA911F /* ViewController.swift in Sources */,
+				432CED9A21115924004C17D7 /* new file.swift in Sources */,
 				901CDAFA1FFBA34D001E5777 /* DateFormatterExtension.swift in Sources */,
 				9008A60B1FFCEECB00B135BE /* EventModel.swift in Sources */,
 				432CECFC2110090D004C17D7 /* login.swift in Sources */,

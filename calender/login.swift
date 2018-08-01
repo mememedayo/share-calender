@@ -23,28 +23,28 @@ class login:UIViewController,UITextFieldDelegate{
         mailtext.delegate = self
         passwordtext.delegate = self
         passwordtext.isSecureTextEntry = true
+
     }
     
-    @IBAction func loginbutton(_ sender: Any) {
+/*    @IBAction func loginbutton(_ sender: Any) {
       
         let alertviewcontroller = UIAlertController(title: "error", message: "間違っています！", preferredStyle: .alert)
         let okaction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         
         Auth.auth().signIn(withEmail: mailtext.text!, password: passwordtext.text!, completion: {(user,error) in
             if error == nil {
-                print("成功")
-          
-            }else{
+             
+          return            }else{
               
                 
                     alertviewcontroller.addAction(okaction)
                     self.present(alertviewcontroller,animated: true,completion: nil)
-            
+            return
             }
             } )
-    }
+    }*/
     
-    @IBAction func createbutton(_ sender: Any) {
+    /*@IBAction func createbutton(_ sender: Any) {
         
         if mailtext.text == nil || passwordtext.text == nil{
             let alertviewcontroller = UIAlertController(title: "error", message: "入力欄が空です！", preferredStyle: .alert)
@@ -73,7 +73,9 @@ class login:UIViewController,UITextFieldDelegate{
                 self.present(alertviewcontroller,animated: true,completion: nil)
                 }
                 
-        }) }}
+        }) }}*/
+    
+    
     
     
 }
