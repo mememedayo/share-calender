@@ -13,7 +13,7 @@
         <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calender" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="calender" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,21 +198,27 @@
                                     <navigationItem title="Add schedule" id="fk2-9S-an8"/>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wL-89-fkE">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wL-89-fkE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="64C-h4-cHo"/>
+                                    <barButtonItem systemItem="cancel" id="64C-h4-cHo">
+                                        <connections>
+                                            <action selector="cancel:" destination="ioU-w6-xKI" id="6es-Hn-97m"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="wRs-PS-Y50"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="F5B-ZM-kom"/>
                                     <barButtonItem systemItem="save" id="UpL-ff-qVr">
                                         <connections>
+                                            <action selector="save:" destination="ioU-w6-xKI" id="RFT-8r-g1V"/>
                                             <segue destination="qiB-rk-mop" kind="unwind" unwindAction="unwindToScheduleListWithSender:" id="dOZ-Hv-ACO"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83Y-kX-vbO">
-                                <rect key="frame" x="30" y="135" width="315" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83Y-kX-vbO">
+                                <rect key="frame" x="30" y="127" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -221,7 +227,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="83Y-kX-vbO" firstAttribute="leading" secondItem="KHS-QE-4KP" secondAttribute="leading" constant="30" id="cz4-o4-HoG"/>
-                            <constraint firstItem="83Y-kX-vbO" firstAttribute="top" secondItem="1wL-89-fkE" secondAttribute="bottom" constant="30" id="g95-ZA-00m"/>
+                            <constraint firstItem="KHS-QE-4KP" firstAttribute="bottom" secondItem="83Y-kX-vbO" secondAttribute="bottom" constant="510" id="hn3-Gx-ASH"/>
                             <constraint firstItem="83Y-kX-vbO" firstAttribute="centerX" secondItem="Rcx-jO-jcl" secondAttribute="centerX" id="ruQ-uV-gGF"/>
                             <constraint firstItem="KHS-QE-4KP" firstAttribute="trailing" secondItem="83Y-kX-vbO" secondAttribute="trailing" constant="30" id="xKp-ac-DYX"/>
                         </constraints>
@@ -230,6 +236,9 @@
                     <navigationItem key="navigationItem" id="Ibs-yr-jox"/>
                     <connections>
                         <outlet property="ScheduleTextField" destination="83Y-kX-vbO" id="UIp-FO-pBB"/>
+                        <outlet property="cancel" destination="64C-h4-cHo" id="XcN-je-SPh"/>
+                        <outlet property="cancelbutoon" destination="64C-h4-cHo" id="o1P-av-YNG"/>
+                        <outlet property="cancelbutton" destination="64C-h4-cHo" id="ldt-Ov-ZSA"/>
                         <outlet property="saveButton" destination="UpL-ff-qVr" id="dIa-4q-Q9m"/>
                     </connections>
                 </viewController>

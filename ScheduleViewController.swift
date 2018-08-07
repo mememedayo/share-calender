@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ScheduleViewController: UIViewController {
+class ScheduleViewController: UIViewController,UITextFieldDelegate {
     
-    var Schedule = String?
+    var Schedule:String?
     
     
     @IBOutlet weak var ScheduleTextField: UITextField!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+   // @IBOutlet weak var saveButton: UIBarButtonItem!
     
+  //  @IBOutlet var cancelbutton: UIBarButtonItem!
     
     
 
@@ -30,14 +31,28 @@ class ScheduleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let button = sender as? UIBarButtonItem, button === self.saveButton else {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let button = sender as? UIBarButtonItem, button === self.saveButton else  {
+            
             return
         }
         self.Schedule = self.ScheduleTextField.text ?? ""
+    }*/
+
+    
+    @IBAction func save(_ sender: Any) {
+       
+        
+        self.Schedule = self.ScheduleTextField.text ?? ""
+        let storybord: UIStoryboard = self.storyboard!
+        let nextview =  storyboard?.instantiateViewController(withIdentifier: "main")
+        present(nextview!, animated: true, completion: nil)
     }
     
-    
+    @IBAction func cancel(_ sender: Any) {
+        
+        
+    }
     
 }
     

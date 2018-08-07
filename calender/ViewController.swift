@@ -13,12 +13,15 @@ import CalculateCalendarLogic
 
 
 class ViewController: UIViewController {
+    let schedule = ScheduleViewController()
     
     @IBAction func unwindToScheduleList(sender: UIStoryboardSegue){
         guard let sourceVC = sender.source as? ScheduleViewController , let Schedule = sourceVC.Schedule else {
             return
         }
-        self.Schedules.append(Schedule)
+        //self.Schedules.append(Schedule)
+      //  Schedule
+      //  self.schedule.Schedule?.append(Schedule)
         self.tableView.reloadData()
     }
     
@@ -48,6 +51,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         //kakakakakakakakakakaka
+        
 
         super.viewDidLoad()
         calendar.scrollDirection = .horizontal
