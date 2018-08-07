@@ -14,6 +14,7 @@
 		432CED6C2110A8D5004C17D7 /* Pods_calenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */; };
 		432CED6E2110A8E7004C17D7 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6D2110A8E7004C17D7 /* FirebaseAuth.framework */; };
 		432CED9A21115924004C17D7 /* new file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CED9921115924004C17D7 /* new file.swift */; };
+		4C11D9CBC00DDD2607AE130F /* Pods_calenderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED692110A8CD004C17D7 /* Pods_calenderUITests.framework */; };
 		9008A6091FFCEA4700B135BE /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */; };
 		9008A60B1FFCEECB00B135BE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008A60A1FFCEECB00B135BE /* EventModel.swift */; };
 		901CDAF81FFBA10A001E5777 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901CDAF71FFBA10A001E5777 /* CalendarTableViewCell.swift */; };
@@ -26,7 +27,9 @@
 		9076781C1FFB383600DA911F /* calenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9076781B1FFB383600DA911F /* calenderTests.swift */; };
 		907678271FFB383600DA911F /* calenderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907678261FFB383600DA911F /* calenderUITests.swift */; };
 		980ADBB69E78A26A0DABA198 /* Pods_calenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EC96A16D5D201CFC7BF55B /* Pods_calenderTests.framework */; };
+		9FC783FF44786BB40B043DDD /* Pods_calenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432CED6B2110A8D5004C17D7 /* Pods_calenderTests.framework */; };
 		FDD2B1A35664EE7A1D8D7704 /* Pods_calender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3593C1B2AE1F1532B5CF89 /* Pods_calender.framework */; };
+		FE22324B21192CE7006C1711 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22324A21192CE7006C1711 /* ScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,7 @@
 		CF702770175E607740F6867E /* Pods-calender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calender/Pods-calender.debug.xcconfig"; sourceTree = "<group>"; };
 		D43B13C2849EBB75BA0EFF08 /* Pods-calender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calender.release.xcconfig"; path = "Pods/Target Support Files/Pods-calender/Pods-calender.release.xcconfig"; sourceTree = "<group>"; };
 		E41DA6E82097670653F05EE0 /* Pods-calenderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calenderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calenderUITests/Pods-calenderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE22324A21192CE7006C1711 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				980ADBB69E78A26A0DABA198 /* Pods_calenderTests.framework in Frameworks */,
+				9FC783FF44786BB40B043DDD /* Pods_calenderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9568A3B757B47FDFB7CC7F /* Pods_calenderUITests.framework in Frameworks */,
+				4C11D9CBC00DDD2607AE130F /* Pods_calenderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,13 +159,14 @@
 			children = (
 				907678061FFB383600DA911F /* AppDelegate.swift */,
 				907678081FFB383600DA911F /* ViewController.swift */,
+				FE22324A21192CE7006C1711 /* ScheduleViewController.swift */,
+				9076780A1FFB383600DA911F /* Main.storyboard */,
 				432CED9921115924004C17D7 /* new file.swift */,
 				901CDAF71FFBA10A001E5777 /* CalendarTableViewCell.swift */,
 				901CDAF91FFBA34D001E5777 /* DateFormatterExtension.swift */,
 				9008A6081FFCEA4700B135BE /* HeaderTableViewCell.swift */,
 				9008A60A1FFCEECB00B135BE /* EventModel.swift */,
 				432CECFB2110090D004C17D7 /* login.swift */,
-				9076780A1FFB383600DA911F /* Main.storyboard */,
 				9076780D1FFB383600DA911F /* Assets.xcassets */,
 				9076780F1FFB383600DA911F /* LaunchScreen.storyboard */,
 				907678121FFB383600DA911F /* Info.plist */,
@@ -361,17 +368,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-calender/Pods-calender-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CalculateCalendarLogic/CalculateCalendarLogic.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CalculateCalendarLogic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -426,6 +435,7 @@
 				901CDAF81FFBA10A001E5777 /* CalendarTableViewCell.swift in Sources */,
 				9008A6091FFCEA4700B135BE /* HeaderTableViewCell.swift in Sources */,
 				907678091FFB383600DA911F /* ViewController.swift in Sources */,
+				FE22324B21192CE7006C1711 /* ScheduleViewController.swift in Sources */,
 				432CED9A21115924004C17D7 /* new file.swift in Sources */,
 				901CDAFA1FFBA34D001E5777 /* DateFormatterExtension.swift in Sources */,
 				9008A60B1FFCEECB00B135BE /* EventModel.swift in Sources */,
