@@ -9,9 +9,19 @@
 import UIKit
 import FSCalendar
 import CoreGraphics
+import CalculateCalendarLogic
 
 
 class ViewController: UIViewController {
+    
+    @IBAction func unwindToScheduleList(sender: UIStoryboardSegue){
+        guard let sourceVC = sender.source as? ScheduleViewController , let Schedule = sourceVC.Schedule else {
+            return
+        }
+        self.Schedules.append(Schedule)
+        self.tableView.reloadData()
+    }
+    
     
     // MARK: Outlets
     @IBOutlet weak var calendar: FSCalendar!
@@ -38,14 +48,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         //kakakakakakakakakakaka
-        if UserDefaults.standard.object(forKey: "check") != nil {
-            
-        }else{
-            
-            let login = self.storyboard?.instantiateViewController(withIdentifier: "login")
-            self.present(login!, animated: true , completion: nil)
-            
-        }
+
         super.viewDidLoad()
         calendar.scrollDirection = .horizontal
         calendar.appearance.caseOptions = [.headerUsesUpperCase,.weekdayUsesUpperCase]
