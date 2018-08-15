@@ -10,19 +10,28 @@ import UIKit
 import FSCalendar
 import CalculateCalendarLogic
 import RealmSwift
+//参考   CalculateCalendarLogic は休日設定できるやつです（多分）
+
+
 
 //ディスプレイサイズ取得
 let w = UIScreen.main.bounds.size.width
 let h = UIScreen.main.bounds.size.height
 
-class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance,UITextFieldDelegate {
     //画面遷移(スケジュール登録ページ)
     @objc func onClick(_: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let SecondController = storyboard.instantiateViewController(withIdentifier: "Insert")
         present(SecondController, animated: true, completion: nil)
     }
+  
     
+    //ボー　追加ボタンの実行(ボタンの設定の仕方が悪い気がする）テキストフィールドデリゲートのついか 予定の変更、消去
+    
+    
+    
+    //葛　やること、レルムの理解、アカウント機能
     //スケジュール内容
     let labelDate = UILabel(frame: CGRect(x: 5, y: 580, width: 400, height: 50))
     //「主なスケジュール」の表示
@@ -128,13 +137,13 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
         
-        labelTitle.text = "主なスケジュール"
+        labelTitle.text = "mian schedule"
         labelTitle.backgroundColor = .orange
         view.addSubview(labelTitle)
         
         //予定がある場合、スケジュールをDBから取得・表示する。
         //無い場合、「スケジュールはありません」と表示。
-        labelDate.text = "スケジュールはありません"
+        labelDate.text = "No schedule"
         labelDate.textColor = .lightGray
         view.addSubview(labelDate)
         
