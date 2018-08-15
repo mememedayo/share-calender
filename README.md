@@ -1,9 +1,4 @@
-# swift-calender
-Calender implementing FSCalender
+# GoogleCalendarSwift
+Google calendar swift, add and read events
 
-all events according to date are listed in array or tuples.
-
-    let dateWithEvents = [("2018-01-03", "loshar"), ("2018-01-04", "Dashain") ,("2018-01-05", "Laxmi Puja") , ("2018-01-06", "maghe sankranti"), ("2018-01-07", "prajatantra diwas"), ("2018-01-08", "Topi diwas"),
-                          ("2018-02-03", "loshar")]
-                          
-    event listing changes if user change the month
+This project was made to guide on the usage of creating events with Google on Swift, also read them.
